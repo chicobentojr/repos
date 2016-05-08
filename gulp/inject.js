@@ -17,12 +17,14 @@ gulp.task('inject-reload', ['inject'], function() {
 
 gulp.task('inject', ['scripts'], function () {
   var injectStyles = gulp.src([
-    path.join(conf.paths.src, '/app/**/*.css')
+    path.join(conf.paths.src, '/app/**/*.css'),
+    path.join(conf.paths.src, '/lib/**/*.css')
   ], { read: false });
 
   var injectScripts = gulp.src([
     path.join(conf.paths.src, '/app/**/*.module.js'),
     path.join(conf.paths.src, '/app/**/*.js'),
+    path.join(conf.paths.src, '/lib/**/*.js'),
     path.join('!' + conf.paths.src, '/app/**/*.spec.js'),
     path.join('!' + conf.paths.src, '/app/**/*.mock.js'),
   ])
