@@ -1,0 +1,31 @@
+<div class="ui menu teal inverted segment">
+  <h1 class="header">My repos</h1>
+</div>
+<div class="ui raised segments">
+  <div class="ui basic repos form segment">
+    <h3 class="ui dividing header">Search</h3>
+    <div class="field">
+      <input ng-model="repos.search" type="text" placeholder="Type something to search (e.g. name,language)" />
+    </div>
+  </div>
+  <div class="ui repos list basic segment">
+    <div class="ui active dimmer" ng-show="repos.loading">
+      <div class="ui text loader">Loading Repos</div>
+    </div>
+    <div class="ui three cards">
+      <div class="card" ng-repeat="repo in repos.repos | filter: repos.searchRepos ">
+        <div class="content">
+          <div class="header">{{repo.name}}</div>
+          <div class="meta">{{repo.language}}</div>
+          <div class="description">
+            {{repo.description}}
+          </div>
+        </div>
+        <a href="{{repo.html_url}}" class="ui bottom attached button">
+          <i class="github icon"></i>
+          Open
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

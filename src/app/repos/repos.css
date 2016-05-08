@@ -1,0 +1,13 @@
+.menu {
+  margin-top: 0 !important;
+}
+
+.segments, .menu .header{
+  width: 1048px;
+  margin: 0 auto !important;
+}
+
+.repos.list {
+  min-height: 150px;
+  padding-bottom: 10px !important;
+}
