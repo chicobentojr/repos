@@ -3,9 +3,14 @@
 </div>
 <div class="ui raised segments">
   <div class="ui basic repos form segment">
-    <h3 class="ui dividing header">Search</h3>
+    <h3 class="ui dividing header">Looking for a repo?</h3>
     <div class="field">
-      <input ng-model="repos.search" type="text" placeholder="Type something to search (e.g. name,language)" />
+      <!-- <input ng-model="repos.search" type="text" placeholder="Type something to search (e.g. name,language)" /> -->
+      <select ng-model="repos.search" class="ui fluid search dropdown">
+        <option value="">Select a language or type something to search (e.g. C#, github.io)</option>
+        <option value="-1">List all repos</option>
+        <option ng-repeat="language in repos.languages" value="{{language}}">{{language}}</option>
+      </select>
     </div>
   </div>
   <div class="ui repos list basic segment">
