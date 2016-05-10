@@ -15,6 +15,12 @@ gulp.task('inject-reload', ['inject'], function() {
   browserSync.reload();
 });
 
+gulp.task('fonts', function () {
+  return gulp.src(path.join(conf.paths.src,'/lib/**/*.{eot,svg,ttf,woff,woff2}'))
+    .pipe($.flatten())
+    .pipe(gulp.dest(path.join(conf.paths.dist, '/styles/themes/default/assets/fonts/')));
+});
+
 gulp.task('inject', ['scripts'], function () {
   var injectStyles = gulp.src([
     path.join(conf.paths.src, '/app/**/*.css'),
