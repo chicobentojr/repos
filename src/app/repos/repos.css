@@ -7,7 +7,16 @@
   margin: 0 auto !important;
 }
 
+
+.raised.segments{
+  margin-bottom: 47px !important;
+}
+
 .repos.list {
-  min-height: 150px;
+  min-height: 223px;
   padding-bottom: 10px !important;
+}
+.ui.footer.segment {
+  margin: 5em 0em 0em;
+  padding: 5em 0em;
 }
